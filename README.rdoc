@@ -1,3 +1,19 @@
 = start_workflow_status
 
-Description goes here
+Plugin that allows setting start statuses for tracker's workflow.
+
+It also makes it possible to set multiple "default" issue statuses
+that will be used if no start statuses were set for a tracker.
+
+Note that the current implementation of start statuses is broken in
+Redmine (as I see it) .In short when you create an issue, by clicking
+on 'New issue' option (before saving it) ,Redmine creates internally
+an issue (in memory) sets it's status to the default one (most likely
+'New') and calles 'new_allowed_statues' on this object.In effect the
+options for statuses for issue creation the user gets are actually the
+statuses that are allowed to transition to from the default (the
+'New')!. 
+
+This plugin by the way also fixes this problem since the new issue's
+status option will be either ones configured for the plugin or default
+ones which now are allowed to be multiple.
