@@ -22,4 +22,5 @@ Dispatcher.to_prepare do
   IssueStatus.send(:include, IssueStatusPatch)
   Tracker.send(:include, TrackerPatch)
   WorkflowsController.send(:include, WorkflowsControllerPatch)
+  IssueStatusesController.send(:include, IssueStatusesControllerPatch)
 end

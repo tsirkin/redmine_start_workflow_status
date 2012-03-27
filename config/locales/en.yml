@@ -1,3 +1,5 @@
 # English strings go here
 en:
   label_start_workflow_status: "Starts Workflow"
+  error_update_statuses: "Error updating Issue Statuses"
+  no_default_closed_selected: "You have to select at least one default and closed status"
